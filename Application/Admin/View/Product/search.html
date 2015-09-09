@@ -1,0 +1,33 @@
+<include file="Public:header" />
+<include file="Public:left" />
+<h2>产品维护</h2>
+
+
+<table  class="table table-striped">
+<tr>
+	<td>id</td>
+	<td>标题</td>
+	<td>缩略图</td>
+	<td>产品介绍</td>
+	<td>价格</td>	
+	<td>操作</td>
+</tr>
+<volist name="list" id="vo">
+<tr>
+	<td>{$vo.id}</td>
+  <td>{$vo.name}</td>
+  <td>{$vo.productthumb}</td>
+  <td>{$vo.productdesc}</td>
+  <td>{$vo.productprice}</td>
+  
+  <td><a href="{:U('mod',array('id'=>$vo['id']))}">修改</a>
+  <a href="javascript:if(confirm('确认删除?')) location='{:U('del',array('id'=>$vo['id']))}'">删除</a>
+  
+  <a href="{:U('form',array('catid'=>$vo['categoryid']))}">添加</a>
+  </td>
+</tr>
+</volist>
+</table>
+{$page}
+<include file="Public:footer" />
+

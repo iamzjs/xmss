@@ -1,0 +1,34 @@
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+                <h2>最新产品</h2>
+                <ul class="list-inline row text-center">
+									<volist name="prod_latest" id="vo">
+                    <li class="col-xs-12 col-lg-6">
+                        <img src="__ROOT__/Uploads/{$vo.productthumb}" class="responsive img-thumbnail" alt="{$vo.name}"/>
+
+                        <p><a href="{:U('home/show/index',array('id'=>$vo['id']))}">{$vo.name}</a>
+                        </p>
+                    </li>
+									</volist>
+                    
+
+                </ul>
+            </div>
+			
+						 <div class="list-group">
+                <h2>公司新闻</h2>
+                <ul class="row">
+									<volist name="news_list" id="vo">
+                    <li class="col-xs-12">
+                        <a href="{:U('home/show/news',array('id'=>$vo['id']))}">{$vo.name}</a>
+                      
+                    </li>
+									</volist>
+                    
+
+                </ul>
+            </div>
+
+        </div>
+        <!--/.sidebar-offcanvas-->
+   
