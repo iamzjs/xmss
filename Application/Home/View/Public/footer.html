@@ -30,7 +30,7 @@ $("#testForm").html5Validate(function() {
 }, {
     validate: function() {
         // 下面这些就是额外的一些特殊验证
-        if ($("#pwdCheck").val() !== $("#password").val()) {
+        if ($("#pwdCheck").val() !== $("#pwd").val()) {
             $("#pwdCheck").testRemind("前后密码不一致");			
             return false;  
         } else if ($("#hobby :checked").length == 0) {
