@@ -28,7 +28,20 @@ $("#testForm").html5Validate(function() {
 	alert("全部通过！");
 	//this.submit();	
 }, {
-	// novalidate: false	
+    validate: function() {
+        // 下面这些就是额外的一些特殊验证
+        if ($("#pwdCheck").val() !== $("#password").val()) {
+            $("#pwdCheck").testRemind("前后密码不一致");
+			$("#pwdCheck").focus();
+			alert("前后密码不一致");
+			
+            return false;  
+        } else if ($("input[type='checkbox']:checked").length < 3) {
+            $("#checkBox").testRemind("至少选择3项");
+            return false;  
+        }
+       return true;  
+    }
 });
 // 拖选
 var mousedownleft, btnmarginleft, flagFollow = false;
