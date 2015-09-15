@@ -2,6 +2,8 @@
 <hr>
 <footer>
         <p>&copy; Company 2014</p>
+		    <p><a href="#" data-toggle="modal" data-target="#admin">管理入口</a></p>
+			  <include file="Public:adminlogin" />
 </footer>
 
 <!-- Bootstrap core JavaScript
@@ -9,7 +11,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="__PUBLIC__/assets/js/jquery.min.js"></script>
 <script src="__PUBLIC__/assets/js/bootstrap.min.js"></script>
-
+<script src="__PUBLIC__/assets/js/jquery-ui.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="__PUBLIC__/assets/js/ie10-viewport-bug-workaround.js"></script>
 
@@ -19,5 +21,62 @@
         interval: 3000 //changes the speed
     })
 </script>
+
+<script src="__PUBLIC__/assets/js/jquery-html5Validate.js?v=14"></script>
+<script>
+$("#testForm").html5Validate(function() {
+	alert("全部通过！");
+	//this.submit();	
+}, {
+	// novalidate: false	
+});
+// 拖选
+var mousedownleft, btnmarginleft, flagFollow = false;
+$(".bar_btn").bind({
+	"mousedown": function(e) {
+		mousedownleft = e.pageX;
+		btnmarginleft = parseInt($(this).css("marginLeft")) || 0;
+		flagFollow = $(this);
+	}	
+});
+$(document).bind({
+	"mousemove": function(e) {
+		var nowmouseleft = e.pageX, finalposleft = nowmouseleft - mousedownleft + btnmarginleft;
+		if (flagFollow) {
+			if (finalposleft > 190) {
+				finalposleft = 190;
+			} else if (finalposleft < -10) {
+				finalposleft = -10;
+			}
+			var score = Math.round((finalposleft + 10) / 40);
+			flagFollow.css("marginLeft", finalposleft).attr("data-content", score);
+			$("#" + flagFollow.attr("data-rel")).val(score);
+		}
+	},
+	"mouseup": function() {
+		flagFollow = false;
+	}
+});
+</script>
+<script type="text/javascript">  
+$(document).ready(function(){  
+    $("#birth").datepicker({  
+        /* 区域化周名为中文 */  
+        dayNamesMin : ["日", "一", "二", "三", "四", "五", "六"],    
+        /* 每周从周一开始 */  
+        firstDay : 1,  
+        /* 区域化月名为中文习惯 */  
+        monthNames : ["1月", "2月", "3月", "4月", "5月", "6月",  
+                    "7月", "8月", "9月", "10月", "11月", "12月"],  
+        /* 月份显示在年后面 */  
+        showMonthAfterYear : true,  
+        /* 年份后缀字符 */  
+        yearSuffix : "年",  
+        /* 格式化中文日期  
+        （因为月份中已经包含“月”字，所以这里省略） */  
+        dateFormat : "yy年MMdd日"     
+    });   
+});  
+</script>  
 </body>
 </html>

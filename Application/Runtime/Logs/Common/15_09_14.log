@@ -1,0 +1,72 @@
+[ 2015-09-14T15:22:40+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:28:37+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:28:52+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001216s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:32:53+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:36:30+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000922s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:50:24+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001030s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:50:24+08:00 ] 127.0.0.1 /xmss/Public/asserts/js/jquery-html5Validate.js?v=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000988s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:51:54+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000936s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:51:54+08:00 ] 127.0.0.1 /xmss/Public/asserts/js/jquery-html5Validate.js?v=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000246s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001180s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:52:50+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T15:54:04+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002483s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-14T16:03:13+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+ERR: 无法加载模块:Public
+

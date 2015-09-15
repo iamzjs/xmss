@@ -8,6 +8,9 @@ class IndexController extends Controller {
 		$corp = $corp_model->find();
 		$this->assign('corp',$corp);
 		//banner
+        $slide_model = M('slide');
+		$slides =  $slide_model->select();
+		$this->assign('slides',$slides);
 		//公司新闻
 		$news_model = M('news');
 		$news_list = $news_model->limit(6)->select();

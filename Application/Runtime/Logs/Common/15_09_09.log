@@ -1,0 +1,12 @@
+[ 2015-09-09T13:25:08+08:00 ] 127.0.0.1 /xmss/index.php/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001360s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-09T13:25:08+08:00 ] 127.0.0.1 /xmss/index.php/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001130s ]
+ERR: 无法加载模块:Favicon
+

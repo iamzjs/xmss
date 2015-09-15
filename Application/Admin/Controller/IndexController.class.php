@@ -63,4 +63,47 @@ class IndexController extends BaseController {
 		$this->success('注销成功，跳转到网站首页!',U('home/index/index'));
 	}
 	
+	
+	public function slides(){
+			$this->display();
+	}
+	public function updateslides(){
+		$model = D('slide');
+		$corpinfo = $model->create();
+		$data['name'] = $_POST['name'];
+		//$data['contact'] = $_POST['contact'];
+		//处理上传文件
+		$config = array(
+			'maxSize'    =>    3145728,
+			'rootPath'   =>    './Uploads/',
+			'savePath'   =>    '',
+			'saveName'   =>    array('uniqid',''),
+			//'saveName'   =>   date('Ymdhis').'_'.mt_rand(),
+			//'saveName'   =>  'time',
+			'exts'       =>    array('jpg', 'gif', 'png', 'jpeg'),
+			'autoSub'    =>    true,
+			'subName'    =>    array('date','Ymd'),
+		);
+		$upload = new \Think\Upload($config);// 实例化上传类
+		
+		if(!empty($_FILES['thumb']['name'])){
+			$upload->saveName = date('Ymdhis').'_'.mt_rand();
+			$info2 = $upload->uploadone($_FILES['thumb']);
+			if(!$info2){
+				$this->error($upload->getError());
+			}
+			else{
+				$data['thumb'] = $info2['savepath'].$info2['savename'];
+			}
+		
+		$result = $model->add($data);
+		if($result){
+		$this->success('上传成功!');
+		}
+		else{
+			$this->error('上传失败！');
+		}
+	}
+	}
+	
 }

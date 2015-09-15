@@ -6,8 +6,8 @@ class LoginController extends Controller {
 		$this->display();
 	}
     public function index(){
-		$admin['username']='admin';
-		$admin['password']='123456';
+		$admin['username']=I('post.name');
+		$admin['password']=I('post.password');
 		$modal = M('admin');
 		$result = $modal->where("username='".$admin['username']."' and password='".$admin['password']."'")->find();
 		if($result){

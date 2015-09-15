@@ -1,0 +1,492 @@
+[ 2015-09-15T08:58:28+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001045s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T08:58:32+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001635s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T08:58:32+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001210s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T08:58:32+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-icons_ffffff_256x240.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T08:58:32+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004432s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T08:58:32+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000958s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T08:58:34+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T08:58:36+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_65_ffffff_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T08:58:58+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-icons_ef8c08_256x240.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000785s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:22+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:22+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:27+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:27+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:27+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-icons_ffffff_256x240.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:27+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001108s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:27+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000990s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:29+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:05:36+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_65_ffffff_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:06:39+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:06:41+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:06:41+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-icons_ffffff_256x240.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001259s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:06:41+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:06:41+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000975s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:06:41+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000974s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:06:43+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:06:47+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_65_ffffff_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:20+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000942s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:20+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:24+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000880s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:24+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001188s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:24+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001263s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:24+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001297s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:24+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-icons_ffffff_256x240.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001296s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:25+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:27+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_65_ffffff_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:08:32+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-icons_ef8c08_256x240.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:01+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:01+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:07+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:07+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-icons_ffffff_256x240.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000984s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:07+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001061s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:07+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000946s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:07+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:07+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000903s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:09+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-bg_glass_65_ffffff_1x400.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:11+08:00 ] 127.0.0.1 /xmss/Public/assets/css/images/ui-icons_ef8c08_256x240.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:11:55+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:20:42+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:20:43+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:21:02+08:00 ] 127.0.0.1 /xmss/index.php/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-15T09:21:02+08:00 ] 127.0.0.1 /xmss/index.php/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-15T09:21:23+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:21:23+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:43:19+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:43:20+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:45:38+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001115s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:45:38+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000912s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:49:59+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:49:59+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:55:00+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002589s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:55:00+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T09:56:16+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001142s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:00:01+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001023s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:00:01+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:01:52+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000949s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:01:53+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:14:44+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:14:50+08:00 ] 127.0.0.1 /xmss/index.php/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000870s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-15T10:14:50+08:00 ] 127.0.0.1 /xmss/index.php/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+ERR: 无法加载模块:Favicon
+
+[ 2015-09-15T10:32:26+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:33:10+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001032s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:34:13+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:34:27+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:40:48+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:40:48+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:42:18+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:42:18+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:42:37+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000860s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:42:38+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001290s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:44:09+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:44:09+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-15T10:48:47+08:00 ] 127.0.0.1 /xmss/Public/offcanvas.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+ERR: 无法加载模块:Public
+
