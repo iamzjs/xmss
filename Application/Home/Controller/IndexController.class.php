@@ -40,5 +40,23 @@ class IndexController extends Controller {
 		$this->display();
     }
 	
+	public function add(){
+		$user_model = D('Admin/user');	
+		$data = I('post.');
+		$data['hobby']=implode(',',$data['hobby']);
+		if(!$user_model->create($data)){
+			$this->error($user_model->getError());
+		}
+		
+		else{		
+			$result = $user_model->add();
+			if($result){
+				$this->success('添加成功',U('home/index/index'));
+			}
+			else{
+				$this->error('添加失败');
+			}
+		}
+	}
 	
 }
