@@ -386,7 +386,7 @@
 					color: "#333",
 					fontSize: "12px",
 					padding: "5px 10px",
-					zIndex: 202
+					zIndex: 9999
 				}
 			};
 			
