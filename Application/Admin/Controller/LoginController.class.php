@@ -9,7 +9,11 @@ class LoginController extends Controller {
 		$admin['username']=I('post.name');
 		$admin['password']=I('post.password');
 		$modal = M('admin');
-		$result = $modal->where("username='".$admin['username']."' and password='".$admin['password']."'")->find();
+		$where = array('username'=>$admin['username'],
+					   'password'=>$admin['password']
+					   );
+					   
+		$result = $modal->where($where)->find();
 		if($result){
 			session('admin',$admin['username']);
 			$modal2 = M('category');
