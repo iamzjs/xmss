@@ -37,6 +37,15 @@ class IndexController extends Controller {
 		$prod_latest = $product_model->where($where_pl)->limit(6)->order('id desc')->select();
 		//dump($prod_latest);
 		$this->assign('prod_latest',$prod_latest);
+		//后台管理员登录失败
+		$re = I('get.re');
+		if(!empty($re)){
+			$re=1;
+		}
+		else{
+			$re=0;
+		}
+		$this->assign('re',$re);
 		$this->display();
     }
 	

@@ -59,7 +59,10 @@ class IndexController extends BaseController {
 		}
 	}
 	public function logout(){
-		session(null);
+		//session(null);
+		unset($_SESSION['admin']);
+		cookie('username',null);
+		cookie('password',null);
 		$this->success('注销成功，跳转到网站首页!',U('home/index/index'));
 	}
 	
