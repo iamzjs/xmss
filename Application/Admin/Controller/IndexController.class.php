@@ -59,7 +59,6 @@ class IndexController extends BaseController {
 		}
 	}
 	public function logout(){
-		//session(null);
 		unset($_SESSION['admin']);
 		cookie('username',null);
 		cookie('password',null);

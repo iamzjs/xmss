@@ -2,7 +2,7 @@
 <hr>
 <footer>
         <p>&copy; Company 2014</p>
-		    <p><a href="#" data-toggle="modal" data-target="#admin">管理入口</a></p>
+		    <p><a href="#" data-toggle="modal" data-target="#admin" id="ladmin">管理入口</a></p>
 			  <include file="Public:adminlogin" />
 </footer>
 
@@ -92,23 +92,31 @@ $(document).ready(function(){
 </script>  
 <script>
     $(function(){
+		//Cookie操作
+		if($.cookie('username')&&$.cookie('password')){
+			//如果cookie非空，将值赋给用户名和密码的表单
+			$("#username").val($.cookie('username'));
+			$("#password").val($.cookie('password'));			
+		}
 		/*根据$re值判断是否因为登录失败返回，如果是弹出登录模态框*/
 		if({$re}==1){
-		
+		//$re==1代表因为输错账号或密码返回，自动打开模态框
         $('#admin').modal({
         show:true,
         backdrop:true
-        });		
+        });	
+		
 		}
 		else{
-		//Cookie操作
-		if($.cookie('username')&&$.cookie('password')){
-			$("#username").val($.cookie('username'));
-			$("#password").val($.cookie('password'));
+		//正常打开管理入口
+		$("#ladmin").click(function(){
+		    //管理入口链接的点击事件
+			if($.cookie('username')&&$.cookie('password')){
+			//如果cookie非空，直接提交表单
 			$("#adminlogin").submit();
-		}
-		}
-		
+			}
+		});		
+		}		
     });
 </script>
 </body>
