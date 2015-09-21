@@ -6,13 +6,13 @@
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										<h4 class="modal-title" id="myModalLabel">管理员登录</h4>
 									  </div>
-									  <form class="form-horizontal" action="{:U('admin/login/index')}" method="post" >
+									  <form class="form-horizontal" action="{:U('admin/login/index')}" id="adminlogin" method="post" >
 									  <div class="modal-body">
 										  
 										  <div class="form-group">
 											<label for="username" class="col-sm-2 control-label">用户名</label>
 											<div class="col-sm-10">
-											  <input type="text" class="form-control" id="username" name="name" value="admin" required>
+											  <input type="text" class="form-control" id="username" name="name" required>
 											</div>
 										  </div>
 										  
@@ -20,7 +20,7 @@
 										  <div class="form-group">
 											<label for="password" class="col-sm-2 control-label">密码</label>
 											<div class="col-sm-10">
-											  <input type="password" class="form-control" id="password" name="password" value="123456" required>
+											  <input type="password" class="form-control" id="password" name="password"  required>
 											</div>
 										  </div>
 										  

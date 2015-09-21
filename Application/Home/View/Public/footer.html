@@ -12,10 +12,11 @@
 <script src="__PUBLIC__/assets/js/jquery.min.js"></script>
 <script src="__PUBLIC__/assets/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/assets/js/jquery-ui.min.js"></script>
+<script src="__PUBLIC__/assets/js/jquery.cookie.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="__PUBLIC__/assets/js/ie10-viewport-bug-workaround.js"></script>
 
-<script src="__PUBLIC__/offcanvas.js"></script>
+<script src="__PUBLIC__/assets/js/offcanvas.js"></script>
 <script>
     $('.carousel').carousel({
         interval: 3000 //changes the speed
@@ -91,12 +92,23 @@ $(document).ready(function(){
 </script>  
 <script>
     $(function(){
+		/*根据$re值判断是否因为登录失败返回，如果是弹出登录模态框*/
 		if({$re}==1){
+		
         $('#admin').modal({
         show:true,
         backdrop:true
-        })
+        });		
 		}
+		else{
+		//Cookie操作
+		if($.cookie('username')&&$.cookie('password')){
+			$("#username").val($.cookie('username'));
+			$("#password").val($.cookie('password'));
+			$("#adminlogin").submit();
+		}
+		}
+		
     });
 </script>
 </body>
