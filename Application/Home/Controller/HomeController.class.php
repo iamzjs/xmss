@@ -6,7 +6,6 @@ class HomeController extends Controller {
 	public $slide_model;
 	public $news_model;
 	public $product_model;
-	public $category_model;
 	public $cat_model;
 	public function _initialize(){
 		$this->corp_model=M('corpinfo');

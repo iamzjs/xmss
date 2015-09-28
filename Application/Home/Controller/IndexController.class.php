@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Home\Controller\HomeController;
 class IndexController extends HomeController {
     public function index(){
+		
 		//公司产品		
 		$cat_list = $this->cat_model->where('parentid=0')->select();
 		$product_list=array();
