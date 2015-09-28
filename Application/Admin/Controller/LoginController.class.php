@@ -2,9 +2,45 @@
 namespace Admin\Controller;
 use Think\Controller;
 class LoginController extends Controller {
-	public function login(){
+	public function form(){
 		$this->display();
 	}
+	
+	public function login(){
+		if(session('?admin')){
+			$this->redirect('/admin/index/mod');
+		}
+		else{
+			$modal = M('admin');
+			$admin['username']=I('post.name');
+			$admin['password']=I('post.password');		
+			$where = array('username'=>$admin['username'],
+						   'password'=>$admin['password']
+						   );
+						   
+			$result = $modal->where($where)->find();
+			if($result){//POST验证成功
+				session_deal($admin['username']);
+				//判断用户是否勾选自动登录
+				if(!empty($_POST['remember'])){
+					//如果用户勾选，则将值存到Cookie中
+					cookie('username',$admin['username'],3600*12);
+					cookie('password',$admin['password'],3600*12);
+				}
+				else{
+					//如果用户未勾选，则清空Cookie
+					cookie('username',null);
+					cookie('password',null);
+				}
+				
+				$this->success('登录成功',U('index/mod'));
+			}	
+			else{//POST验证失败
+				$this->redirect('/admin/login/form');
+			}
+		}
+		
+    }
     public function index(){
 		$modal = M('admin');
 		$admin['username']=I('post.name');
@@ -29,7 +65,7 @@ class LoginController extends Controller {
 					//Cookie验证是否成功
 					if($result){
 						//验证成功，进行Session赋值，然后跳转其他管理页面
-						$this->session_deal(cookie('username'));
+						session_deal(cookie('username'));
 						$this->redirect('/admin/index/mod');
 					}
 					else{
@@ -52,7 +88,7 @@ class LoginController extends Controller {
 						   
 			$result = $modal->where($where)->find();
 			if($result){//POST验证成功
-				$this->session_deal($admin['username']);
+				session_deal($admin['username']);
 				//判断用户是否勾选自动登录
 				if(!empty($_POST['remember'])){
 					//如果用户勾选，则将值存到Cookie中
@@ -75,19 +111,5 @@ class LoginController extends Controller {
      
     }
 	
-	private function session_deal($name){
-				session('admin',$name);
-				$modal2 = M('category');
-				$parentlist = $modal2->where('parentid=0')->select();
-				$catlist=array();
-				for($i=0;$i<count($parentlist);$i++){
-					$cat = array();
-					$cat['catid'] = $parentlist[$i]['id'];
-					$cat['name'] = $parentlist[$i]['name'];
-					$cat['subcat'] = $modal2->where('parentid='.$parentlist[$i]['id'])->select();
-					$catlist[]=$cat;
-					
-				}
-				session('catlist',$catlist);
-	}
+	
 }
