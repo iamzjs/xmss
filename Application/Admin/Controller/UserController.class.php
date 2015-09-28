@@ -2,9 +2,11 @@
 namespace Admin\Controller;
 use Think\Controller;
 class UserController extends BaseController {
-
+	 public function _initialize(){
+		$this->model=D('user');
+	}
 	public function index(){
-		$model = M('user');		
+		//$model = M('user');		
 		//$list = $user->select();
 		//$this->assign('list',$list);
 		//分页
@@ -17,7 +19,7 @@ class UserController extends BaseController {
 		$this->assign('list',$list);// 赋值数据集
 		*/
 		$where='1=1';
-		$mypage = MyPage($model,$where,4);
+		$mypage = MyPage($this->model,$where,4);
 		$this->assign('page',$mypage['show']);// 赋值分页输出
 		$this->assign('list',$mypage['list']);
 		$this->display();
@@ -26,12 +28,12 @@ class UserController extends BaseController {
 		$this->display();
 	}
 	public function add(){
-		$user_model = D('user');		
-		if(!$user_model->create()){
-			$this->error($user_model->getError());
+		//$user_model = D('user');		
+		if(!$this->model->create()){
+			$this->error($this->model->getError());
 		}
 		else{		
-			$result = $user_model->add();
+			$result = $this->model->add();
 			if($result){
 				$this->success('添加成功',U('index'));
 			}
@@ -43,23 +45,23 @@ class UserController extends BaseController {
 	public function mod(){
 		$id = $_GET['id'];
 		//dump($id);
-		$user_model = M('user');
-		$data = $user_model->where('id='.$id)->find();
+		//$user_model = M('user');
+		$data = $this->model->where('id='.$id)->find();
 		//dump($data);
 		$this->assign('oneuser',$data);
 		$this->display();
 		
 	}
 	public function update(){
-		$user_model = D('user');
+		//$user_model = D('user');
 		
-		if(!$user_model->create()){
-			$this->error($user_model->getError());
+		if(!$this->model->create()){
+			$this->error($this->model->getError());
 		}
 		else{
 			//dump($_POST);
-			//dump($user_model->data());
-			$result = $user_model->save();
+			//dump($this->model->data());
+			$result = $this->model->save();
 			if($result){
 				$this->success('用户编辑成功！',U('index'));
 			}
@@ -72,10 +74,10 @@ class UserController extends BaseController {
 	}
 	
 	public function del(){
-		$user_model = M('user');
+		//$user_model = M('user');
 		$id = $_GET['id'];
-		//$user_model->delete($id);
-		$result = $user_model->where('id='.$id)->delete();
+		//$this->model->delete($id);
+		$result = $this->model->where('id='.$id)->delete();
 		if($result){
 			$this->success('用户删除成功！',U('index'));
 		}
@@ -85,9 +87,9 @@ class UserController extends BaseController {
 		
 	}
 	public function search(){
-			$model = M('user');
+			//$model = M('user');
 			$map['name'] = array('like','%'.I('post.search_key').'%');
-			$list = $model->where($map)->select();
+			$list = $this->model->where($map)->select();
 			$this->assign('list',$list);
 			$this->display();
 		

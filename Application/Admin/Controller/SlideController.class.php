@@ -2,9 +2,12 @@
 namespace Admin\Controller;
 use Think\Controller;
 class SlideController extends BaseController {
+	public function _initialize(){
+		$this->model=D('slide');
+	}
     public function index(){
-		$model = M('slide');		
-		$list = $model->order('id desc')->select();
+		//$model = M('slide');		
+		$list = $this->model->order('id desc')->select();
 		$this->assign('list',$list);
 		$this->display();
 	}
@@ -12,8 +15,8 @@ class SlideController extends BaseController {
 			$this->display();
 	}
 	public function add(){
-		$model = D('slide');
-		$corpinfo = $model->create();
+		//$model = D('slide');
+		$corpinfo = $this->model->create();
 		$data['name'] = $_POST['name'];
 		//$data['contact'] = $_POST['contact'];
 		//处理上传文件
@@ -40,7 +43,7 @@ class SlideController extends BaseController {
 				$data['thumb'] = $info2['savepath'].$info2['savename'];
 			}
 		
-			$result = $model->add($data);
+			$result = $this->model->add($data);
 			if($result){
 			$this->success('添加成功!');
 			}
@@ -54,15 +57,15 @@ class SlideController extends BaseController {
 	public function mod(){
 		$id = $_GET['id'];
 		//dump($id);
-		$model = M('slide');
-		$data = $model->where('id='.$id)->find();		
+		//$model = M('slide');
+		$data = $this->model->where('id='.$id)->find();		
 		$this->assign('one',$data);
 		$this->display();
 		
 	}
 	public function update(){
-		$model = D('slide');
-		$model->create();
+		//$model = D('slide');
+		$this->model->create();
 		$data['id'] = $_POST['id'];
 		$data['name'] = $_POST['name'];
 		//$data['contact'] = $_POST['contact'];
@@ -92,7 +95,7 @@ class SlideController extends BaseController {
 		
 			
 		}
-		$result = $model->save($data);
+		$result = $this->model->save($data);
 			
 			if($result){
 			$this->success('编辑成功!',U('admin/slide/index'));
@@ -103,11 +106,11 @@ class SlideController extends BaseController {
 	}
 	
 	public function del(){
-		$model = M('slide');
+		//$model = M('slide');
 		$id = $_GET['id'];
 		//$model->delete($id);
 		
-		$result = $model->where('id='.$id)->delete();
+		$result = $this->model->where('id='.$id)->delete();
 		if($result){
 			$this->success('删除成功！',U('slide/index'));
 		}
@@ -118,12 +121,12 @@ class SlideController extends BaseController {
 	}
 	
 	public function dels(){
-		$model = M('slide');
+		//$model = M('slide');
 		$ids = $_POST['id'];
 		//$model->delete($id);
 		
 		for($i=0;$i<count($ids);$i++){
-			$result = $model->where('id='.$ids[$i])->delete();
+			$result = $this->model->where('id='.$ids[$i])->delete();
 		}		
 		$this->success('删除成功！',U('slide/index'));
 		

@@ -2,7 +2,9 @@
 namespace Admin\Controller;
 use Think\Controller;
 class CategoryController extends BaseController {
-    
+    public function _initialize(){
+		$this->model=D('category');
+	}
 	public function index(){
 		//$model = M('category');		
 		//$list = $model->where('type='.$_GET['type'])->select();
@@ -29,25 +31,25 @@ class CategoryController extends BaseController {
 		$this->display();
 	}
 	public function form(){
-		$model = M('category');
-		$data = $model->where('parentid=0')->select();
+		//$model = M('category');
+		$data = $this->model->where('parentid=0')->select();
 		$this->assign('list',$data);
 		$this->display();
 	}
 	public function add(){
-		$model = D('category');		
-		if(!$model->create()){
-			$this->error($model->getError());
+		//$model = D('category');		
+		if(!$this->model->create()){
+			$this->error($this->model->getError());
 		}
 		else{		
 			//$model->content = preg_replace("/<[^><]*script[^><]*>/i",'',$model->content);
 			
-			$result = $model->add();
+			$result = $this->model->add();
 			if($result){
 				//获取parentid
 				$parentid = I('post.parentid');
 				//获取parentid类型的所有子类型
-				$data = $model->where('parentid='.$parentid)->select();
+				$data = $this->model->where('parentid='.$parentid)->select();
 				foreach($data as $key=>$value){
 					$data0[] = $value['id'];					
 				}
@@ -55,7 +57,7 @@ class CategoryController extends BaseController {
 				$str = implode(',',$data0);
 				//更新parentid类型的childids字段
 				$list['childids'] = $str;
-				$model->where('id='.$parentid)->save($list);
+				$this->model->where('id='.$parentid)->save($list);
 				$this->catlist();
 				$this->success('添加成功',U('form'));
 			}
@@ -67,10 +69,10 @@ class CategoryController extends BaseController {
 	public function mod(){
 		$id = $_GET['id'];
 		//dump($id);
-		$model = M('category');
-		$data = $model->where('id='.$id)->find();
+		//$model = M('category');
+		$data = $this->model->where('id='.$id)->find();
 		//$data['content'] = htmlspecialchars_decode($data['content']);
-		$data2 = $model->where('parentid=0')->select();
+		$data2 = $this->model->where('parentid=0')->select();
 		$this->assign('list',$data2);
 		$this->assign('one',$data);
 		//dump($data2);
@@ -78,10 +80,10 @@ class CategoryController extends BaseController {
 		
 	}
 	public function update(){
-		$model = D('category');
+		//$model = D('category');
 		
 		if(!$model->create()){
-			$this->error($model->getError());
+			$this->error($this->model->getError());
 		}
 		else{
 			//dump($_POST);
@@ -90,15 +92,15 @@ class CategoryController extends BaseController {
 			//过滤script
 			//$preg = "/<script[\s\S]*?<\/script>/i";
 			//$model->content= preg_replace($preg,"",$model->content,3);    //第四个参数中的3表示替换3次，默认是-1，替换全部
-			$result = $model->save();
+			$result = $this->model->save();
 			if($result){
 				//获取parentid
 				$parentid = I('post.parentid');
 				//获取parentid类型的所有子类型
-				$pdata = $model->where('parentid=0')->select();
+				$pdata = $this->model->where('parentid=0')->select();
 				//dump($pdata);
 				foreach($pdata as $pkey=>$pvalue){
-					$data = $model->where('parentid='.$pvalue['id'])->select();
+					$data = $this->model->where('parentid='.$pvalue['id'])->select();
 					//dump($data);
 					$list = array();
 					$data0=array();
@@ -117,7 +119,7 @@ class CategoryController extends BaseController {
 					{
 						$list['childids']='';
 					}
-					$model->where('id='.$pvalue['id'])->save($list);
+					$this->model->where('id='.$pvalue['id'])->save($list);
 				}
 				$this->catlist();
 				$this->success('编辑成功！',U('index','parentid='.$parentid));
@@ -131,13 +133,13 @@ class CategoryController extends BaseController {
 	}
 	
 	public function del(){
-		$model = M('category');
+		//$model = M('category');
 		$product_model = M('product');
 		$id = $_GET['id'];
 		//$model->delete($id);
-		$parentid = $model->where('id='.$id)->getField('parentid');
+		$parentid = $this->model->where('id='.$id)->getField('parentid');
 		//dump($type);
-		$cat = $model->where('id='.$id)->find();
+		$cat = $this->model->where('id='.$id)->find();
 		//判断是否有子类
 		if(!empty($cat[childids])){
 			$this->error('该类有子类别，请先删除子类别！');
@@ -148,7 +150,7 @@ class CategoryController extends BaseController {
 				$this->error('该类有产品存在，请先删除该类别下的产品！');
 			}
 		}
-		$result = $model->where('id='.$id)->delete();
+		$result = $this->model->where('id='.$id)->delete();
 		if($result){
 			$this->catlist();
 			$this->success('删除成功！',U('category/index','parentid='.$parentid));
@@ -160,22 +162,22 @@ class CategoryController extends BaseController {
 	}
 	
 	public function search(){
-			$model = M('category');
+			//$model = M('category');
 			$map['name'] = array('like','%'.I('post.search_key').'%');
-			$list = $model->where($map)->select();
+			$list = $this->model->where($map)->select();
 			$this->assign('list',$list);
 			$this->display();
 		
 	}
 	private function catlist(){
-			$modal2 = M('category');
-			$parentlist = $modal2->where('parentid=0')->select();
+			//$modal2 = M('category');
+			$parentlist = $this->model->where('parentid=0')->select();
 			$catlist=array();
 			for($i=0;$i<count($parentlist);$i++){
 				$cat = array();
 				$cat['catid'] = $parentlist[$i]['id'];
 				$cat['name'] = $parentlist[$i]['name'];
-				$cat['subcat'] = $modal2->where('parentid='.$parentlist[$i]['id'])->select();
+				$cat['subcat'] = $this->model->where('parentid='.$parentlist[$i]['id'])->select();
 				$catlist[]=$cat;
 				
 			}

@@ -2,9 +2,11 @@
 namespace Admin\Controller;
 use Think\Controller;
 class ProductController extends BaseController {
-    
+    public function _initialize(){
+		$this->model=D('product');
+	}
 	public function index(){
-		$model = M('product');		
+		//$model = M('product');		
 		/*
 		$catid = I('get.catid');
 		$count      = $model->where(array('categoryid'=>I('get.catid')))->count();// 查询满足要求的总记录数
@@ -15,7 +17,7 @@ class ProductController extends BaseController {
 		$this->assign('page',$show);// 赋值分页输出
 		$this->assign('list',$list);*/
 		$where = array('categoryid'=>I('get.catid'));
-		$mypage = MyPage($model,$where,3);
+		$mypage = MyPage($this->model,$where,3);
 		$this->assign('page',$mypage['show']);// 赋值分页输出
 		$this->assign('list',$mypage['list']);
 		$this->assign('catid',$catid);
@@ -28,7 +30,7 @@ class ProductController extends BaseController {
 		$this->display();
 	}
 	public function add(){
-		$model = D('product');	
+		//$model = D('product');	
 		$data = I('post.');
 		//处理上传文件
 		$config = array(
@@ -54,12 +56,12 @@ class ProductController extends BaseController {
 				//dump($data);
 			}
 		}
-		if(!$model->create($data)){
-			$this->error($model->getError());
+		if(!$this->model->create($data)){
+			$this->error($this->model->getError());
 		}
 		else{		
 			//$model->content = preg_replace("/<[^><]*script[^><]*>/i",'',$model->content);
-			$result = $model->add();
+			$result = $this->model->add();
 			if($result){
 				$this->success('添加成功',U('form',array('catid'=>I('post.categoryid'))));
 			}
@@ -71,8 +73,8 @@ class ProductController extends BaseController {
 	public function mod(){
 		$id = $_GET['id'];
 		//dump($id);
-		$model = M('product');
-		$data = $model->where('id='.$id)->find();
+		//$model = M('product');
+		$data = $this->model->where('id='.$id)->find();
 		//$data['content'] = htmlspecialchars_decode($data['content']);
 		
 		$model = M('category');
@@ -84,7 +86,7 @@ class ProductController extends BaseController {
 		
 	}
 	public function update(){
-		$model = D('product');
+		//$model = D('product');
 		$data = I('post.');
 		
 		//处理上传文件
@@ -113,15 +115,15 @@ class ProductController extends BaseController {
 		}
 		
 		
-		if(!$model->create($data)){
-			$this->error($model->getError());
+		if(!$this->model->create($data)){
+			$this->error($this->model->getError());
 		}
 		else{
 			//dump($_POST);
 			//dump($model->data());
 			$catid = I('post.categoryid');
 			
-			$result = $model->save();
+			$result = $this->model->save();
 			if($result){
 				$this->success('编辑成功！',U('index','catid='.$catid));
 			}
@@ -134,26 +136,25 @@ class ProductController extends BaseController {
 	}
 	
 	public function del(){
-		$model = M('product');
+		//$model = M('product');
 		$id = $_GET['id'];
 		//$model->delete($id);
-		$type = $model->where('id='.$id)->getField('type');
+		$type = $this->model->where('id='.$id)->getField('type');
 		//dump($type);
-		$result = $model->where('id='.$id)->delete();
+		$result = $this->model->where('id='.$id)->delete();
 		if($result){
 			$this->success('删除成功！',U('product/index','type='.$type));
 		}
 		else{
-			$this->error('删除失败！');
 			$this->error('删除失败！');
 		}
 		
 	}
 	
 	public function search(){
-			$model = M('product');
+			//$model = M('product');
 			$map['name'] = array('like','%'.I('post.search_key').'%');
-			$list = $model->where($map)->select();
+			$list = $this->model->where($map)->select();
 			$this->assign('list',$list);
 			$this->display();
 		
