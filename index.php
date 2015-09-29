@@ -19,7 +19,9 @@ define('APP_DEBUG',True);
 
 // 定义应用目录
 define('APP_PATH','./Application/');
-//define('BIND_MODULE','Admin');
+//define('BIND_MODULE','Profile');//绑定模块，如果不存在则创建
+//define('BUILD_CONTROLLER_LIST','Profile,Index,Comment');//创建控制器类列表
+//define('BUILD_MODEL_LIST','User,Comment');//创建模型类列表
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 

@@ -119,37 +119,5 @@ $(document).ready(function(){
 		}		
     });
 </script>
-<script>
-	$(function(){
-		$("#btn").click(function(){
-			var user = $("#username").val();
-			var pass = $("#password").val();
-			var action = "{:U('Profile/index/login')}";
-			var action2 = "{:U('Profile/index/index')}";
-			var action3 = "{:U('Profile/index/logout')}";
-			if(user=="" || pass==""){
-				alert("用户名和密码不能为空");
-				return false;
-			}
-			$.ajax({
-				type:"POST",
-				url:action,
-				data:{"username":user,"password":pass},
-				success:function(json){
-					if(json.success==1){
-						//alert("登录成功！");
-	var htmlcon="<li><a href='"+action2+"'>个人中心</a></li><li><a href='"+action3+"'>注销</a></li>";
-						$("#login").modal("hide");
-						$("#profile").html(htmlcon);
-					}
-					else{
-						return false;
-					}
-				}
-			});
-		});
-	});
-</script>
-
 </body>
 </html>

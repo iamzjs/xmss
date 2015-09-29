@@ -1,6 +1,5 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
 class UserController extends BaseController {
 	 public function _initialize(){
 		$this->model=D('user');
