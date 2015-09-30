@@ -52,7 +52,9 @@ footer {
 }
 
 h2 {
+		padding-left:10px;
 }
+p{	padding-left:10px;}
 
 .box {
     margin-bottom: 20px;

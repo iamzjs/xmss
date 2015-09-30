@@ -10,15 +10,45 @@
                     
 
                     <h1 class="brand-name text-center">{$one.name}</h1>
-									<img src="__ROOT__/Uploads/{$one.productthumb}" class="responsive img-thumbnail pull-left"/> 
-									价格：{$one.productprice}元<br/>
-									产品介绍：{$one.productdesc}
-
+									<img src="__ROOT__/Uploads/{$one.productthumb}" class="responsive img-thumbnail pull-left" style="margin-right:10px;"/> 
+									<h3>价格：{$one.productprice}元</h3>
+									<h3>
+									产品介绍：</h3>{$one.productdesc}
+									
                 </div>
-
+						
 
             </div>
             <!--/row-->
+			
+			<div class="row box">
+                    
+
+				<h2 class="brand-name">产品评论</h2>
+				<hr>
+				<ul class="list-unstyled" id="comment_list">
+							<notempty name="list">
+							
+						
+							<volist name="list" id="vo">
+							<li class="row">
+								<div class="col-md-1">{$vo.username}</div>
+								<div class="col-md-11">
+								{$vo.comment}
+								</div>
+							</li>
+							<hr>
+							</volist>
+						
+						</notempty>
+						</ul>
+						{$page}
+						<notempty name="Think.session.user">
+						<textarea id="comment" name="comment" class="form-control" rows="5" placeholder="请撰写评论！" required></textarea><br/>
+						<button class="btn btn-primary pull-right" id="btn_comment">提交</button>
+						</notempty>
+
+			</div>
             
         </div>
         <!--/.col-xs-12.col-sm-9-->

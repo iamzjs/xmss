@@ -2,22 +2,31 @@
 namespace Profile\Controller;
 class IndexController extends ProfileController {
     public function index(){
-		$uid = session('user.userid');
+		$uid = session('user.id');
 		$where = array('userid'=>$uid);
-	   $comment_list = $this->comment_model->where($where)->select();
-	   $one = $this->user_model->find($uid);
+		$mypage = MyPage($this->comment_model,$where,8);
+		$this->assign('page',$mypage['show']);// 赋值分页输出
+		$this->assign('comment_list',$mypage['list']);
+	   //$one = $this->user_model->find($uid);
+	   $one = session('user');
+	   $hobbies = array('音乐','影视','游戏','运动健身');
+	   for($i=0;$i<count($hobbies);$i++){
+		   $hobby_checked[]=checkstr($hobbies[$i],$one['hobby']);
+	   }
+	   $this->assign('one',$one);
+	   $this->assign('hobby_checked',$hobby_checked);
        $this->display();
     }
 	public function login(){
 		//dump(I('post.'));
-		$model = M('user');
+		//$model = M('user');
 		$user['username']=I('post.username');
 		$user['password']=I('post.password');		
 		$where = array('username'=>$user['username'],
 					   'password'=>$user['password']
 					   );
 					   
-		$result = $model->where($where)->find();
+		$result = $this->user_model->where($where)->find();
 		if($result){//POST验证成功
 			session('user',$result);
 			//dump($result);
@@ -25,7 +34,7 @@ class IndexController extends ProfileController {
 			$this->ajaxReturn($result,"json");
 		}
 		else{
-			
+			$this->ajaxReturn(array('success'=>0),"json");
 		}
     }
 	public function logout(){
@@ -49,42 +58,42 @@ class IndexController extends ProfileController {
 			}
 		}
 	}
-	/*
-	public function login(){
-		if(session('?admin')){
-			$this->redirect('/admin/index/mod');
-		}
-		else{
-			$modal = M('admin');
-			$admin['username']=I('post.name');
-			$admin['password']=I('post.password');		
-			$where = array('username'=>$admin['username'],
-						   'password'=>$admin['password']
-						   );
-						   
-			$result = $modal->where($where)->find();
-			if($result){//POST验证成功
-				session_deal($admin['username']);
-				//判断用户是否勾选自动登录
-				if(!empty($_POST['remember'])){
-					//如果用户勾选，则将值存到Cookie中
-					cookie('username',$admin['username'],3600*12);
-					cookie('password',$admin['password'],3600*12);
-				}
-				else{
-					//如果用户未勾选，则清空Cookie
-					cookie('username',null);
-					cookie('password',null);
-				}
-				
-				$this->success('登录成功',U('index/mod'));
-			}	
-			else{//POST验证失败
-				$this->redirect('/admin/login/form');
-			}
+	
+	public function update(){
+		$data = I('post.');
+		$data['hobby']=implode(',',$data['hobby']);
+		if(!$this->user_model->create($data)){
+			$this->error($this->user_model->getError());
 		}
 		
-    }*/
+		else{		
+			$result = $this->user_model->save();
+			if($result){
+				session('user',$data);
+				$this->success('编辑成功',U('profile/index/index'));
+			}
+			else{
+				$this->error('编辑失败');
+			}
+		}
+	}
+	public function comment(){
+		$data = I('post.');
+		if(!$this->comment_model->create($data)){
+			$this->error($this->comment_model->getError());
+		}
+		
+		else{
+			$result = $this->comment_model->add();			
+			if($result){//添加成功
+				$data['success']=1;
+				$this->ajaxReturn($data,"json");
+			}
+			else{
+				$this->ajaxReturn(array('success'=>'0'),"json");
+			}
+		}
+	}
    
 	
 }

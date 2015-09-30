@@ -1,8 +1,19 @@
-<include file="Public:header" />
+<include file="Home@Public:header" />
 <div class="container">
     <div class="row row-offcanvas row-offcanvas-right mlist">
 			<h2>我的评论</h2>
-        welcome!
+        <empty name="comment_list">
+				<p>暂无评论！</p>
+			<else />
+			<ul class="list-inline">
+				<volist name="comment_list" id="vo">
+				<li class="col-md-6 col-lg-12">
+					{$vo.comment}
+				</li>
+				</volist>
+			</ul>
+			{$page}
+			</empty>
 		   <h2>我的信息</h2>
 		   <include file="info" />
 				
@@ -11,5 +22,5 @@
     <!--/row-->
 	</div>
 <!--/.container-->
-<include file="Public:footer" />
+<include file="Home@Public:footer" />
    
