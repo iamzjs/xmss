@@ -1,0 +1,60 @@
+<include file="Public:header" />
+<include file="Public:left" />
+
+<h2>评论维护</h2>
+<form class="form-horizontal" action="{:U('search')}" method="post">
+  <div class="form-group">
+    <div class="col-sm-4 col-sm-offset-6">
+			 <input type="text" class="form-control" name="search_key"  required>
+	  </div>
+    
+    <div class="col-sm-2">
+     <input type="submit" class="btn btn-default" value="搜索">
+    </div>
+  </div>
+  
+
+</form>
+<form method="post" onsubmit="return confirm('您确定要删除吗？')" action="{:U('dels')}">
+<table  class="table table-striped lists">
+<tr>
+	<td>选择</td>
+	<td>id</td>
+	<td>产品</td>
+	<td>评论者</td>
+	<td>评论</td>
+	<td>时间</td>	
+	<td>操作</td>
+</tr>
+<volist name="list" id="vo">
+<tr>
+  <td><input type="checkbox" name="id[]" value="{$vo.id}"/></td>
+	<td>{$vo.id}</td>
+  <td>{$vo.productname}</td>
+  <td>{$vo.username}</td>
+  <td>{$vo.comment}</td>
+  <td>{$vo.insert_time}</td>
+  
+  <td>
+  <a href="{:U('form',array('id'=>$vo['id']))}">回复</a>
+  
+  <a href="{:U('valid',array('id'=>$vo['id'],'isvalid'=>$vo['isvalid']))}">
+  <eq name="vo.isvalid" value="1">取消审核<else />审核通过</eq>
+  </a>
+  <a href="javascript:if(confirm('确认删除?')) location='{:U('del',array('id'=>$vo['id']))}'">删除</a>
+  </td>
+</tr>
+</volist>
+<tr><td colspan="7">
+<input class="btn btn-default" id="selAll" type="button" value="全选" />
+
+<input class="btn btn-default" id="unSelAll" type="button" value="全不选" />
+
+<input class="btn btn-default" id="reverSel" type="button" value="反选" />
+<input class="btn btn-default" id="doDel" type="submit" value="删除" />
+</td></tr>
+</table>
+</form>
+{$page}
+<include file="Public:footer" />
+

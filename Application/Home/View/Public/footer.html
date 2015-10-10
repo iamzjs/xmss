@@ -168,12 +168,14 @@ $(document).ready(function(){
 				success:function(json){
 					if(json.success==1){
 						//alert("评论成功！");
-						var htmlcon="<li>"+json.comment+"</li>";
+						var username="{$Think.session.user.name}";
+						var htmlcon="<li  class='row'><div class='col-md-1'>"+username+"</div><div class='col-md-11'>"+json.comment+"</div></li><hr>";
 						$("#comment").hide();
 						$("#btn_comment").hide();
 						$("#comment_list").prepend(htmlcon);
 					}
 					else{
+						alert("您已经评论过该商品了，谢谢再次光顾！");
 						return false;
 					}
 				}

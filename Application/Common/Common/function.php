@@ -27,7 +27,7 @@ function MyPageSql($model,$where,$sql,$per=3){
 		$show       = $Page->show();// 分页显示输出
 		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
 		$sql = $sql.' order by id desc limit '.$Page->firstRow.','.$Page->listRows;
-		$list = M()->where($where)->query($sql);
+		$list = M()->query($sql);
 		
 		return array('show'=>$show,'list'=>$list);
 }

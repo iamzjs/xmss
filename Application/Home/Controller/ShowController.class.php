@@ -9,7 +9,7 @@ class ShowController extends HomeController {
 		$where = array('resourseid'=>$product_id);
 
 		//$mypage = MyPage($comment_model,$where,6);
-		$sql = "select c.*,u.name username from comment c left join user u on c.userid=u.id";
+		$sql = "select c.*,u.name username from comment c left join user u on c.userid=u.id where isvalid=1 and resourseid=".$product_id;
 		$mypage = MyPageSql($comment_model,$where,$sql,6);
 
 		$this->assign('page',$mypage['show']);// 赋值分页输出
