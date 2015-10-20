@@ -2,10 +2,8 @@
 namespace Admin\Controller;
 use Think\Controller;
 class CommentController extends BaseController {
-	public function _initialize(){
-		$this->model=D('comment');
-	}
 	public function index(){
+		$this->model=D('comment');
 		$where = array('1'=>'1');
 		$sql = "select c.*,u.name username,p.name productname from comment c left join user u on c.userid=u.id left join product p on c.resourseid=p.id";
 		$mypage = MyPageSql($this->model,$where,$sql,6);
@@ -15,13 +13,15 @@ class CommentController extends BaseController {
 		$this->display();
 	}
 	public function form(){
+		$this->model=D('comment');
 		$one = $this->model->find(I('get.id'));
 		$this->assign('one',$one);
 		$this->display();
 	}
 	public function add(){
+		$this->model=D('comment');
 		if(!$this->model->create()){
-			$this->error($model->getError());
+			$this->error($this->model->getError());
 		}
 		else{	
 			$result = $this->model->field('reply')->save();
@@ -35,6 +35,7 @@ class CommentController extends BaseController {
 	}
 	
 	public function del(){
+		$this->model=D('comment');
 		$id = $_GET['id'];
 		$result = $this->model->delete($id);
 		if($result){
@@ -46,6 +47,7 @@ class CommentController extends BaseController {
 		
 	}
 	public function dels(){
+		$this->model=D('comment');
 		$ids = $_POST['id'];
 		for($i=0;$i<count($ids);$i++){
 			$result = $this->model->delete($ids[$i]);
@@ -55,6 +57,7 @@ class CommentController extends BaseController {
 		
 	}
 	public function search(){
+		$this->model=D('comment');
 			$map['name'] = array('like','%'.I('post.search_key').'%');
 			$list = $this->model->where($map)->select();
 			$this->assign('list',$list);
@@ -62,6 +65,7 @@ class CommentController extends BaseController {
 		
 	}
 	public function valid(){
+		$this->model=D('comment');
 		$id = $_GET['id'];
 		$isvalid = $_GET['isvalid']==1?0:1;
 		$result = $this->model->save(array('id'=>$id,'isvalid'=>$isvalid));

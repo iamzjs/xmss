@@ -16,7 +16,7 @@ class ListController extends HomeController {
 		$this->assign('list',$list);
 		*/
 		$where = array('categoryid'=>$catid,"productthumb !=''");
-		$my_pages = MyPage($this->product_model,$where);
+		$my_pages = MyPage($this->product_model,$where,$per=6);
 		$this->assign('page',$my_pages['show']);// 赋值分页输出
 		$this->assign('list',$my_pages['list']);
 		$this->display();
@@ -34,7 +34,7 @@ class ListController extends HomeController {
 		$this->assign('list',$list);
 		*/
 		$where = array('type'=>$type);
-		$my_pages = MyPage($this->news_model,$where);
+		$my_pages = MyPage($this->news_model,$where,$per=6);
 		$this->assign('page',$my_pages['show']);// 赋值分页输出
 		$this->assign('list',$my_pages['list']);
 		$this->assign('type',$type);

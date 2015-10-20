@@ -17,7 +17,7 @@ class CategoryController extends HomeController {
 	  
 	   
 	   //$childids = explode(',',$cat[childids]);
-	   $cat_list = $this->cat_model->where($where)->select();
+	   $cat_list = $this->cat_model->where($where)->order('id desc')->select();
 		for($i=0;$i<count($cat_list);$i++){
 			$cat = $cat_list[$i];
 			//dump($cat);

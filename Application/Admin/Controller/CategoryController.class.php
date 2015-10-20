@@ -2,11 +2,8 @@
 namespace Admin\Controller;
 use Think\Controller;
 class CategoryController extends BaseController {
-    public function _initialize(){
-		$this->model=D('category');
-	}
-	public function index(){
-		//$model = M('category');		
+    public function index(){
+		$this->model=D('category');		
 		//$list = $model->where('type='.$_GET['type'])->select();
 		$model = M();
 		$sql="select count(*) num from category c1 
@@ -31,7 +28,7 @@ class CategoryController extends BaseController {
 		$this->display();
 	}
 	public function form(){
-		//$model = M('category');
+		$this->model=D('category');
 		$data = $this->model->where('parentid=0')->select();
 		$this->assign('list',$data);
 		$this->display();
@@ -69,7 +66,7 @@ class CategoryController extends BaseController {
 	public function mod(){
 		$id = $_GET['id'];
 		//dump($id);
-		//$model = M('category');
+		$this->model=D('category');
 		$data = $this->model->where('id='.$id)->find();
 		//$data['content'] = htmlspecialchars_decode($data['content']);
 		$data2 = $this->model->where('parentid=0')->select();
@@ -80,7 +77,7 @@ class CategoryController extends BaseController {
 		
 	}
 	public function update(){
-		//$model = D('category');
+		$this->model=D('category');
 		
 		if(!$model->create()){
 			$this->error($this->model->getError());
@@ -133,7 +130,7 @@ class CategoryController extends BaseController {
 	}
 	
 	public function del(){
-		//$model = M('category');
+		$this->model=D('category');
 		$product_model = M('product');
 		$id = $_GET['id'];
 		//$model->delete($id);
@@ -162,7 +159,7 @@ class CategoryController extends BaseController {
 	}
 	
 	public function search(){
-			//$model = M('category');
+			$this->model=D('category');
 			$map['name'] = array('like','%'.I('post.search_key').'%');
 			$list = $this->model->where($map)->select();
 			$this->assign('list',$list);
@@ -170,7 +167,7 @@ class CategoryController extends BaseController {
 		
 	}
 	private function catlist(){
-			//$modal2 = M('category');
+			$this->model=D('category');
 			$parentlist = $this->model->where('parentid=0')->select();
 			$catlist=array();
 			for($i=0;$i<count($parentlist);$i++){

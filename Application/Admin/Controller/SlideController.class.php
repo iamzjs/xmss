@@ -2,11 +2,8 @@
 namespace Admin\Controller;
 use Think\Controller;
 class SlideController extends BaseController {
-	public function _initialize(){
-		$this->model=D('slide');
-	}
     public function index(){
-		//$model = M('slide');		
+		$this->model=D('slide');		
 		$list = $this->model->order('id desc')->select();
 		$this->assign('list',$list);
 		$this->display();
@@ -15,7 +12,7 @@ class SlideController extends BaseController {
 			$this->display();
 	}
 	public function add(){
-		//$model = D('slide');
+		$this->model=D('slide');
 		$corpinfo = $this->model->create();
 		$data['name'] = $_POST['name'];
 		//$data['contact'] = $_POST['contact'];
@@ -56,15 +53,14 @@ class SlideController extends BaseController {
 	
 	public function mod(){
 		$id = $_GET['id'];
-		//dump($id);
-		//$model = M('slide');
+		$this->model=D('slide');
 		$data = $this->model->where('id='.$id)->find();		
 		$this->assign('one',$data);
 		$this->display();
 		
 	}
 	public function update(){
-		//$model = D('slide');
+		$this->model=D('slide');
 		$this->model->create();
 		$data['id'] = $_POST['id'];
 		$data['name'] = $_POST['name'];
@@ -106,7 +102,7 @@ class SlideController extends BaseController {
 	}
 	
 	public function del(){
-		//$model = M('slide');
+		$this->model=D('slide');
 		$id = $_GET['id'];
 		//$model->delete($id);
 		
@@ -121,7 +117,7 @@ class SlideController extends BaseController {
 	}
 	
 	public function dels(){
-		//$model = M('slide');
+		$this->model=D('slide');
 		$ids = $_POST['id'];
 		//$model->delete($id);
 		

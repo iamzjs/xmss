@@ -9,10 +9,11 @@
                
 							<div class="col-xs-12 col-lg-12 mlist">
                     <h2><eq name="type" value="1">公司新闻</eq><eq name="type" value="2">行业新闻</eq></h2>
-                    <ul class="list-inline row">
+                    <ul class="list-group">
 											<volist name="list" id="vo">
-                        <li class="col-xs-12 col-sm-6">
-                            <a href="{:U('home/show/news',array('id'=>$vo['id']))}">{$vo.name}</a>
+                        <li class="list-group-item row">
+                            <a href="{:U('home/show/news',array('id'=>$vo['id']))}" class="col-sm-8">{$vo.name}</a>
+										  <span class="col-sm-4">{$vo.insert_time}</span>
                            
                         </li>
 											</volist>

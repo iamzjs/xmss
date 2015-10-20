@@ -1,11 +1,8 @@
 <?php
 namespace Admin\Controller;
 class UserController extends BaseController {
-	 public function _initialize(){
-		$this->model=D('user');
-	}
 	public function index(){
-		//$model = M('user');		
+		$this->model=D('user');		
 		//$list = $user->select();
 		//$this->assign('list',$list);
 		//分页
@@ -27,7 +24,7 @@ class UserController extends BaseController {
 		$this->display();
 	}
 	public function add(){
-		//$user_model = D('user');		
+		$this->model=D('user');		
 		if(!$this->model->create()){
 			$this->error($this->model->getError());
 		}
@@ -43,8 +40,7 @@ class UserController extends BaseController {
 	}
 	public function mod(){
 		$id = $_GET['id'];
-		//dump($id);
-		//$user_model = M('user');
+		$this->model=D('user');
 		$data = $this->model->where('id='.$id)->find();
 		//dump($data);
 		$this->assign('oneuser',$data);
@@ -52,7 +48,7 @@ class UserController extends BaseController {
 		
 	}
 	public function update(){
-		//$user_model = D('user');
+		$this->model=D('user');
 		
 		if(!$this->model->create()){
 			$this->error($this->model->getError());
@@ -73,7 +69,7 @@ class UserController extends BaseController {
 	}
 	
 	public function del(){
-		//$user_model = M('user');
+		$this->model=D('user');
 		$id = $_GET['id'];
 		//$this->model->delete($id);
 		$result = $this->model->where('id='.$id)->delete();
@@ -86,7 +82,7 @@ class UserController extends BaseController {
 		
 	}
 	public function search(){
-			//$model = M('user');
+			$this->model=D('user');
 			$map['name'] = array('like','%'.I('post.search_key').'%');
 			$list = $this->model->where($map)->select();
 			$this->assign('list',$list);

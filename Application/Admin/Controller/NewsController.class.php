@@ -2,10 +2,9 @@
 namespace Admin\Controller;
 use Think\Controller;
 class NewsController extends BaseController {
-	public function _initialize(){
-		$this->model=D('news');
-	}
+	
 	public function index(){
+		$this->model=D('news');
 		//$model = M('news');		
 		//$list = $model->where('type='.$_GET['type'])->select();
 		/*
@@ -20,16 +19,15 @@ class NewsController extends BaseController {
 		$mypage = MyPage($this->model,$where,4);
 		$this->assign('page',$mypage['show']);// 赋值分页输出
 		$this->assign('list',$mypage['list']);
-		
 		$this->display();
 	}
 	public function form(){
 		$this->display();
 	}
 	public function add(){
-		//$model = D('news');		
+		$this->model=D('news');		
 		if(!$this->model->create()){
-			$this->error($model->getError());
+			$this->error($this->model->getError());
 		}
 		else{		
 			//$model->content = preg_replace("/<[^><]*script[^><]*>/i",'',$model->content);
@@ -43,6 +41,7 @@ class NewsController extends BaseController {
 		}
 	}
 	public function mod(){
+		$this->model=D('news');
 		$id = $_GET['id'];
 		//dump($id);
 		//$model = M('news');
@@ -53,10 +52,10 @@ class NewsController extends BaseController {
 		
 	}
 	public function update(){
-		//$model = D('news');
+		$this->model=D('news');
 		
 		if(!$this->model->create()){
-			$this->error($model->getError());
+			$this->error($this->model->getError());
 		}
 		else{
 			//dump($_POST);
@@ -78,7 +77,7 @@ class NewsController extends BaseController {
 	}
 	
 	public function del(){
-		//$model = M('news');
+		$this->model=D('news');
 		$id = $_GET['id'];
 		//$model->delete($id);
 		$type = $this->model->where('id='.$id)->getField('type');
@@ -93,7 +92,7 @@ class NewsController extends BaseController {
 		
 	}
 	public function dels(){
-		//$model = M('news');
+		$this->model=D('news');
 		$ids = $_POST['id'];
 		//$model->delete($id);
 		$type = $this->model->where('id='.$ids[0])->getField('type');
@@ -106,7 +105,7 @@ class NewsController extends BaseController {
 		
 	}
 	public function search(){
-			//$model = M('news');
+			$this->model=D('news');
 			$map['name'] = array('like','%'.I('post.search_key').'%');
 			$list = $this->model->where($map)->select();
 			$this->assign('list',$list);

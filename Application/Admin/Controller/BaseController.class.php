@@ -10,6 +10,6 @@ class BaseController extends Controller {
 	   if(!session('?admin')){
 		   //$this->error('无权限',U('home/index/index'));
 		   $this->redirect('admin/login/form');
-	   }   
+	   }
     }
 }

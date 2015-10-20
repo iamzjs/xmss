@@ -1,0 +1,77 @@
+
+<hr>
+<footer>
+        <p>&copy; Company 2014</p>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="__PUBLIC__/assets/js/jquery.min.js"></script>
+
+<script>
+	$(function(){
+		$("#btn").click(function(){
+			var user = $("#username").val();
+			var pass = $("#password").val();
+			var action = "{:U('Profile/index/login')}";
+			var action2 = "{:U('Profile/index/index')}";
+			var action3 = "{:U('Profile/index/logout')}";
+			if(user=="" || pass==""){
+				alert("用户名和密码不能为空");
+				return false;
+			}
+			$.ajax({
+				type:"POST",
+				url:action,
+				data:{"username":user,"password":pass},
+				success:function(json){
+					if(json.success==1){
+						//alert("登录成功！");
+	var htmlcon="<li><a href='"+action2+"'>个人中心</a></li><li><a href='"+action3+"'>注销</a></li>";
+						$("#login").modal("hide");
+						$("#profile").html(htmlcon);
+					}
+					else{
+						return false;
+					}
+				}
+			});
+		});
+	});
+</script>
+<script>
+	$(function(){
+		$("#btn_comment").click(function(){
+			var comment = $("#comment").val();
+			var resourseid = {$one['id']};
+			var userid = {$Think.session.user.id};
+			var action = "{:U('Profile/index/comment')}";
+			if(comment==""){
+				alert("请填写评论内容");
+				return false;
+			}
+			$.ajax({
+				type:"POST",
+				url:action,
+				data:{"resourseid":resourseid,"userid":userid,"comment":comment},
+				success:function(json){
+					if(json.success==1){
+						//alert("评论成功！");
+						var username="{$Think.session.user.name}";
+						var htmlcon="<li  class='row'><div class='col-md-1'>"+username+"</div><div class='col-md-11'>"+json.comment+"</div></li><hr>";
+						$("#comment").hide();
+						$("#btn_comment").hide();
+						$("#comment_list").prepend(htmlcon);
+					}
+					else{
+						alert("您已经评论过该商品了，谢谢再次光顾！");
+						return false;
+					}
+				}
+			});
+		});
+	});
+</script>
+</body>
+</html>

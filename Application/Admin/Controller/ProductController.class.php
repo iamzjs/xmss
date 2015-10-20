@@ -2,11 +2,8 @@
 namespace Admin\Controller;
 use Think\Controller;
 class ProductController extends BaseController {
-    public function _initialize(){
-		$this->model=D('product');
-	}
 	public function index(){
-		//$model = M('product');		
+		$this->model=D('product');		
 		/*
 		$catid = I('get.catid');
 		$count      = $model->where(array('categoryid'=>I('get.catid')))->count();// 查询满足要求的总记录数
@@ -16,6 +13,7 @@ class ProductController extends BaseController {
 		$list = $model->where(array('categoryid'=>I('get.catid')))->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 		$this->assign('page',$show);// 赋值分页输出
 		$this->assign('list',$list);*/
+		$catid = I('get.catid'); 
 		$where = array('categoryid'=>I('get.catid'));
 		$mypage = MyPage($this->model,$where,3);
 		$this->assign('page',$mypage['show']);// 赋值分页输出
@@ -24,13 +22,14 @@ class ProductController extends BaseController {
 		$this->display();
 	}
 	public function form(){
-		$model = M('category');
-		$one = $model->where(array('id'=>I('get.catid')))->find();
+		$this->model=D('category');
+		
+		$one = $this->model->where(array('id'=>I('get.catid')))->find();
 		$this->assign('one',$one);
 		$this->display();
 	}
 	public function add(){
-		//$model = D('product');	
+		$this->model=D('product');	
 		$data = I('post.');
 		//处理上传文件
 		$config = array(
@@ -73,12 +72,12 @@ class ProductController extends BaseController {
 	public function mod(){
 		$id = $_GET['id'];
 		//dump($id);
-		//$model = M('product');
+		$this->model=D('product');	
 		$data = $this->model->where('id='.$id)->find();
 		//$data['content'] = htmlspecialchars_decode($data['content']);
 		
-		$model = M('category');
-		$cat = $model->where(array('id'=>$data['categoryid']))->find();
+		$model_cat = M('category');
+		$cat = $model_cat->where(array('id'=>$data['categoryid']))->find();
 		$this->assign('cat',$cat);
 		
 		$this->assign('one',$data);
@@ -86,7 +85,7 @@ class ProductController extends BaseController {
 		
 	}
 	public function update(){
-		//$model = D('product');
+		$this->model=D('product');
 		$data = I('post.');
 		
 		//处理上传文件
@@ -136,7 +135,7 @@ class ProductController extends BaseController {
 	}
 	
 	public function del(){
-		//$model = M('product');
+		$this->model=D('product');
 		$id = $_GET['id'];
 		//$model->delete($id);
 		$type = $this->model->where('id='.$id)->getField('type');
@@ -152,7 +151,7 @@ class ProductController extends BaseController {
 	}
 	
 	public function search(){
-			//$model = M('product');
+			$this->model=D('product');
 			$map['name'] = array('like','%'.I('post.search_key').'%');
 			$list = $this->model->where($map)->select();
 			$this->assign('list',$list);

@@ -5,7 +5,7 @@ class IndexController extends HomeController {
     public function index(){
 		
 		//公司产品		
-		$cat_list = $this->cat_model->where('parentid=0')->select();
+		$cat_list = $this->cat_model->where('parentid=0')->order('id desc')->select();
 		$product_list=array();
 		for($i=0;$i<count($cat_list);$i++){
 			$cat = $cat_list[$i];

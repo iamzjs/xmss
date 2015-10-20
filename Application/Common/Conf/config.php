@@ -9,4 +9,7 @@ return array(
 	'DB_PORT'=>3306,// 端口
 	'DB_PREFIX'=>'',// 数据库表前缀
 	'DB_CHARSET'=>'utf8',// 数据库字符集
+	
+	//'MODULE_ALLOW_LIST' => array('Gjq', 'Profile'),
+	//'MODULE_DEFAULT'    => 'Gjq',
 );

@@ -7,14 +7,14 @@ class IndexController extends BaseController {
     }
 	
 	public function mod(){
-		$model = M('corpinfo');
-		$corpinfo = $model->find();
+		$this->model = D('corpinfo');
+		$corpinfo = $this->model->find();
 		$this->assign('corpinfo',$corpinfo);
 		$this->display();
 	}
 	public function update(){
-		$model = D('corpinfo');
-		$corpinfo = $model->create();
+		$this->model = D('corpinfo');
+		$corpinfo = $this->model->create();
 		$data['corpname'] = $_POST['corpname'];
 		$data['contact'] = $_POST['contact'];
 		//处理上传文件
@@ -50,7 +50,7 @@ class IndexController extends BaseController {
 				$data['banner'] = $info2['savepath'].$info2['savename'];
 			}
 		}
-		$result = $model->where('id=1')->save($data);
+		$result = $this->model->where('id=1')->save($data);
 		if($result){
 		$this->success('编辑成功!');
 		}
@@ -59,7 +59,7 @@ class IndexController extends BaseController {
 		}
 	}
 	public function logout(){
-		unset($_SESSION['admin']);
+		session('admin',null);
 		cookie('username',null);
 		cookie('password',null);
 		$this->success('注销成功，跳转到网站首页!',U('home/index/index'));
@@ -70,8 +70,8 @@ class IndexController extends BaseController {
 			$this->display();
 	}
 	public function updateslides(){
-		$model = D('slide');
-		$corpinfo = $model->create();
+		$this->model = D('slide');
+		$corpinfo = $this->model->create();
 		$data['name'] = $_POST['name'];
 		//$data['contact'] = $_POST['contact'];
 		//处理上传文件
@@ -98,7 +98,7 @@ class IndexController extends BaseController {
 				$data['thumb'] = $info2['savepath'].$info2['savename'];
 			}
 		
-		$result = $model->add($data);
+		$result = $this->model->add($data);
 		if($result){
 		$this->success('上传成功!');
 		}
