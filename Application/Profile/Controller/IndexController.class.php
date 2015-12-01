@@ -20,9 +20,9 @@ class IndexController extends ProfileController {
 	public function login(){
 		//dump(I('post.'));
 		//$model = M('user');
-		$user['username']=I('post.username');
+		$user['name']=I('post.name');
 		$user['password']=I('post.password');		
-		$where = array('username'=>$user['username'],
+		$where = array('name'=>$user['name'],
 					   'password'=>$user['password']
 					   );
 					   
